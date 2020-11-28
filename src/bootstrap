@@ -1,0 +1,6 @@
+#!/bin/sh
+# shellcheck disable=SC2164
+cd "$LAMBDA_TASK_ROOT"
+MODULE=$($_HANDLER | cut -d "." -f 1)
+FUNCTION=$($_HANDLER | cut -d "." -f 2)
+./wrapper -m "$MODULE" -f "$FUNCTION"
