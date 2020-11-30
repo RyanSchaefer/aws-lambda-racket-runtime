@@ -1,5 +1,5 @@
 #lang racket
 (provide test)
 
-(define (test event) 2)
+(define (test event) event)
 

@@ -8,7 +8,8 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: ./src
-      Handler: example.function
+      Handler: test.test
       Runtime: provided
+      Timeout: 15
   Metadata:
     BuildMethod: makefile
