@@ -4,5 +4,5 @@ CMD cp -R /build/. "artifacts_dir/" \
     && echo "a" | /usr/bin/raco pkg install "artifacts_dir/" \
     && /usr/bin/raco exe /artifacts_dir/wrapper.rkt \
     && /usr/bin/raco distribute /artifacts_dir/distribute /artifacts_dir/wrapper \
-    && rm /artifacts_dir/wrapper
+    && rm /artifacts_dir/wrapper /artifacts_dir/Dockerfile /artifacts_dir/Makefile
 
