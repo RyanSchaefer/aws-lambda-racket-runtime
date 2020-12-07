@@ -1,6 +1,9 @@
 #!/usr/bin/env racket
-#lang racket
+#lang racket/base
 (require racket/exn)
+(require racket/cmdline)
+(require racket/string)
+(require racket/list)
 (require aws)
 (require net/head)
 (require net/http-client)
@@ -8,8 +11,9 @@
 
 (define module (make-parameter ""))
 (define function (make-parameter ""))
-(define event (make-parameter "\r\n\r\n"))
+(define event (make-parameter (empty-header)))
 
+(credentials-from-environment!)
 
 (define parser
   (command-line

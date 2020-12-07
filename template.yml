@@ -8,7 +8,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: ./src
-      Handler: test.test
+      Handler: cat_test.cat
       Runtime: provided
       Timeout: 15
   Metadata:
